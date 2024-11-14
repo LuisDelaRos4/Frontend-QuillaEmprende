@@ -5,11 +5,12 @@ import { PageModulosyrolesComponent } from '../../modulosyroles/pages/page-modul
 import { PageProductosyserviciosComponent } from "../../productosyservicios/pages/page-productosyservicios/page-productosyservicios.component";
 import { PageUsuariosComponent } from '../../usuarios/pages/page-usuarios/page-usuarios.component';
 import { PageVentasComponent } from "../../ventas/pages/page-ventas/page-ventas.component";
+import { PageAbonosComponent } from "../../abonos/pages/page-abonos/page-abonos.component";
 
 @Component({
   selector: 'app-page-main',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent, PageModulosyrolesComponent, PageProductosyserviciosComponent, PageUsuariosComponent, PageVentasComponent],
+  imports: [RouterOutlet, SidebarComponent, PageModulosyrolesComponent, PageProductosyserviciosComponent, PageUsuariosComponent, PageVentasComponent, PageAbonosComponent],
   templateUrl: './page-main.component.html',
   styleUrl: './page-main.component.scss'
 })
