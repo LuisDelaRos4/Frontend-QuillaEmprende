@@ -1,16 +1,26 @@
+<!-- Contenedor principal de la aplicación que ocupa toda la altura de la ventana -->
 <div class="container-fluid vh-100" style="background-color: rgba(161, 197, 255, 0.5);">
+
   <div class="row h-100">
-    <!-- Sidebar -->
+
+    <!-- Barra lateral izquierda -->
     <div class="col-2 h-100 p-3">
+
       <div class="bg-light h-100 overflow-auto p-3 rounded-4">
-        <!-- Sidebar content -->
+
         <app-sidebar></app-sidebar>
+
       </div>
+
     </div>
 
-    <!-- Main content area -->
+    <!-- Área principal de contenido -->
     <div class="col-10 h-100 p-3">
+
       <router-outlet></router-outlet>
+
     </div>
+
   </div>
+
 </div>
