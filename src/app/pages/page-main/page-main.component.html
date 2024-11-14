@@ -1,38 +1,16 @@
-<!-- Container principal: vh-100 asegura altura completa del viewport -->
-<div class="container-fluid vh-100" style="background-color: rgba(161, 197, 255, 0.5);;">
-
-  <!-- Row principal con altura completa -->
+<div class="container-fluid vh-100" style="background-color: rgba(161, 197, 255, 0.5);">
   <div class="row h-100">
-
-    <!-- Sidebar izquierdo -->
-    <!-- h-100 asegura altura completa -->
-    <div class="col col-2 h-100 p-3">
-
-      <!-- Contenedor interno del sidebar con scroll -->
+    <!-- Sidebar -->
+    <div class="col-2 h-100 p-3">
       <div class="bg-light h-100 overflow-auto p-3 rounded-4">
-
-        <!-- Contenido del sidebar -->
+        <!-- Sidebar content -->
         <app-sidebar></app-sidebar>
-
       </div>
-
     </div>
 
-    <!-- Contenido principal -->
-    <div class="col col-10 h-100 p-3">
-
-      <!-- Contenedor light que usa flex para organizar el contenido vertical -->
-      <div class="bg-light h-100 d-flex flex-column p-3 rounded-4">
-
-        <!-- Contenido de los componentes que se rendizaran -->
-        <router-outlet />
-        <!-- <app-page-modulosyroles></app-page-modulosyroles> -->
-        <!-- <app-page-productosyservicios></app-page-productosyservicios> -->
-
-      </div>
-
+    <!-- Main content area -->
+    <div class="col-10 h-100 p-3">
+      <router-outlet></router-outlet>
     </div>
-
   </div>
-
 </div>
