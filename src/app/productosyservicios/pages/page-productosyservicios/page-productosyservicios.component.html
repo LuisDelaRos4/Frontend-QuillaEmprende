@@ -1,7 +1,10 @@
-<div>
-  <!-- Botones de Producos y Servicios -->
-  <app-buttons-productosyservicios></app-buttons-productosyservicios>
-  <!-- Contenido de Producos y Servicios -->
-  <app-content-productosyservicios></app-content-productosyservicios>
+<!-- Contenedor principal que organiza la estructura de módulos y roles -->
+<div class="bg-light h-100 d-flex flex-column p-3 rounded-4">
+
+  <!-- Barra de navegación superior fija -->
+  <app-buttons-productosyservicios class="flex-shrink-0"></app-buttons-productosyservicios>
+
+  <!-- Área de contenido principal con scroll -->
+  <app-content-productosyservicios class="flex-grow-1 min-h-0"></app-content-productosyservicios>
 
 </div>
