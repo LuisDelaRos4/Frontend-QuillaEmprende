@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { ModulosyrolesInterface } from '../../../interfaces/modulosyroles.interface';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModulosInterface } from '../../../interfaces/modulos.interface';
+import { ModulosyrolesService } from '../../../services/modulosyroles.service';
 
 @Component({
   selector: 'app-table-modulos',
@@ -9,8 +10,26 @@ import { CommonModule } from '@angular/common';
   templateUrl: './table-modulos.component.html',
   styleUrl: './table-modulos.component.scss'
 })
-export class TableModulosComponent {
+export class TableModulosComponent implements OnInit {
 
-  @Input() public modulosyroles: ModulosyrolesInterface[] = [];
+  modulos: ModulosInterface[] = [];
+
+  constructor(private modulosyrolesService: ModulosyrolesService) { }
+
+  ngOnInit(): void {
+    this.loadModulos();
+  }
+
+  loadModulos(): void {
+    this.modulosyrolesService.getModulos().subscribe({
+      next: (data: ModulosInterface[]) => {
+        console.log('Datos recibidos en table-modulos:', data);
+        this.modulos = data;
+      },
+      error: (error) => {
+        console.error('Error al obtener módulos en table-modulos:', error);
+      }
+    });
+  }
 
 }

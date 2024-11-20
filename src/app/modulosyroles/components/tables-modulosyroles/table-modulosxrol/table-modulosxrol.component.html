@@ -8,8 +8,8 @@
         <tr>
           <th>#</th>
           <th>ID</th>
-          <th>Nombre</th>
-          <th>Descripción</th>
+          <th>Modulo ID</th>
+          <th>Rol ID</th>
           <th>Estado</th>
           <th>Fecha de Registro</th>
           <th>Fecha de Modificación</th>
@@ -17,11 +17,11 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let item of modulos ; let i = index">
+        <tr *ngFor="let item of modulosxrol ; let i = index">
           <td>{{ i + 1}}</td>
           <td>{{ item.id }}</td>
-          <td>{{ item.nombre }}</td>
-          <td>{{ item.descripcion }}</td>
+          <td>{{ item.modulo_id }}</td>
+          <td>{{ item.rol_id }}</td>
           <td>{{ item.estado }}</td>
           <td>{{ item.fecha_registro | date }}</td>
           <td>{{ item.fecha_modificacion | date }}</td>

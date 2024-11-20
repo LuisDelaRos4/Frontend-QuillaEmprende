@@ -1,7 +1,7 @@
-export interface ModulosyrolesInterface {
+export interface ModulosxrolInterface {
   id?: number;
-  nombre: string;
-  descripcion: string;
+  modulo_id: number;
+  rol_id: number;
   estado?: boolean;
   fecha_registro?: Date;
   fecha_modificacion?: Date;
