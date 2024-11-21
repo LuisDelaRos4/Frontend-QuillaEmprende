@@ -14,14 +14,14 @@ export class TableModulosxrolComponent implements OnInit {
 
   modulosxrol: ModulosxrolInterface[] = [];
 
-  constructor(private ModulosyrolesService: ModulosyrolesService) { }
+  constructor(private modulosyrolesService: ModulosyrolesService) { }
 
   ngOnInit(): void {
     this.loadModulosxrol();
   }
 
   loadModulosxrol(): void {
-    this.ModulosyrolesService.getModulosxrol().subscribe({
+    this.modulosyrolesService.getModulosxrol().subscribe({
       next: (data: ModulosxrolInterface[]) => {
         console.log('Datos recibidos en table-modulosxrol:', data);
         this.modulosxrol = data;

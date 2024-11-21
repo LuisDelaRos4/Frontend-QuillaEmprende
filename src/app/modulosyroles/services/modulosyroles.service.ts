@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Environment } from '../../../../env/environment';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { ModulosInterface } from '../interfaces/modulos.interface';
 import { RolesInterface } from '../interfaces/roles.interface';
 import { ModulosxrolInterface } from '../interfaces/modulosxrol.interface';
