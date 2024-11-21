@@ -31,5 +31,4 @@ export class TableRolesComponent implements OnInit {
       }
     });
   }
-
 }
