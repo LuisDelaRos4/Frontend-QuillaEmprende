@@ -26,5 +26,4 @@ export class ProductosyserviciosService {
   getProductosServicios(): Observable<ProductosServiciosInterface[]> {
     return this.http.get<ProductosServiciosInterface[]>(`${this.BASE_URL}/get_productos_servicios`);
   }
-
 }
