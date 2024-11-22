@@ -15,14 +15,31 @@ export const routes: Routes = [
     component: PageMainComponent,
     children: [
       { path: 'dashboard', component: PageDashboardComponent },
-      { path: 'modulosyroles', component: PageModulosyrolesComponent },
-      { path: 'productosyservicios', component: PageProductosyserviciosComponent },
+
+      {
+        path: 'modulosyroles',
+        loadChildren: () => import('./modulosyroles/modulosyroles.routes').then(m => m.MODULOSYROLES_ROUTES)
+      },
+
+      {
+        path: 'productosyservicios',
+        loadChildren: () => import('./productosyservicios/productosyservicios.routes').then(m => m.PRODUCTOSYSERVICIOS_ROUTES)
+      },
+
       {
         path: 'usuarios',
         loadChildren: () => import('./usuarios/usuarios.routes').then(m => m.USUARIOS_ROUTES)
       },
-      { path: 'ventas', component: PageVentasComponent },
-      { path: 'abonos', component: PageAbonosComponent }
+
+      {
+        path: 'ventas',
+        loadChildren: () => import('./ventas/ventas.routes').then(m => m.VENTAS_ROUTES)
+      },
+
+      {
+        path: 'abonos',
+        loadChildren: () => import('./abonos/abonos.routes').then(m => m.ABONOS_ROUTES)
+      }
     ]
   },
   // Ruta wildcard para manejar rutas no existentes

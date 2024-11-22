@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-buttons-modulosyroles',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './buttons-modulosyroles.component.html',
   styleUrl: './buttons-modulosyroles.component.scss'
 })
