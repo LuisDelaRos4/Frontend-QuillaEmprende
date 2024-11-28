@@ -1,0 +1,33 @@
+<div class="border border-light-subtle rounded-4 p-3">
+
+  <div class="table-responsive">
+
+    <table class="table table-striped table-hover align-middle">
+
+      <thead class="table-secondary text-nowrap">
+        <tr>
+          <th>#</th>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Estado</th>
+          <th>Fecha de Registro</th>
+          <th>Fecha de Modificación</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of tipos_documentos ; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.id }}</td>
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.estado }}</td>
+          <td>{{ item.fecha_registro | date }}</td>
+          <td>{{ item.fecha_modificacion | date }}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

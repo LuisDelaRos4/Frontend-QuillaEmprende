@@ -1,0 +1,42 @@
+<div class="border border-light-subtle rounded-4 p-3">
+
+  <div class="table-responsive">
+
+    <table class="table table-striped table-hover">
+
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+          <th>Fecha de Registro</th>
+          <th>Fecha de Modificación</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of modulos ; let i = index">
+          <td>{{ i + 1}}</td>
+          <td>{{ item.id }}</td>
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.descripcion }}</td>
+          <td>{{ item.estado }}</td>
+          <td>{{ item.fecha_registro | date }}</td>
+          <td>{{ item.fecha_modificacion | date }}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+<!-- Contenedor de botones en la parte inferior centrado -->
+<div class="d-flex justify-content-center align-items-end mt-3">
+  <button class="btn btn-outline-success mx-2">Nuevo</button>
+  <button class="btn btn-outline-warning mx-2">Actualizar</button>
+  <button class="btn btn-outline-danger mx-2">Desactivar</button>
+</div>
